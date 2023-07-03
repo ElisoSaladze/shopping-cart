@@ -17,7 +17,11 @@ const ProductsPage = () => {
         fetchData()
     }, [])
     return (
-        <div>
+        <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(4, 1fr)',
+            gap: '30px'
+        }}>
             <Cart />
             {products?.map(product => (
                 <Card key={product.id} {...product} 
